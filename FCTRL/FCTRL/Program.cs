@@ -12,23 +12,29 @@ namespace FCTRL
 
             for (int i = 0; i < t; i++)
             {
-                int n = Int32.Parse(Console.ReadLine());
-                int zerosCount = 0;
+                long n = Int32.Parse(Console.ReadLine());
+                long zerosCount = 0;
 
-                for (int j = 1; j <= n; j++)
+
+                while (n%5 != 0)
                 {
-                    int tempJ = j;
-                    while (tempJ % 5 == 0)
-                    {
-                        tempJ = tempJ / 5;
-                        zerosCount++;
-                    }
+                    n--;
+                }
 
+                long divider = 5;
+                while (n / divider >= 1)
+                {
+                    divider = divider * divider;
+                }
+
+                while (divider >=5)
+                {
+                    long tempN = n;
+                    zerosCount = zerosCount + tempN / divider;
+                    divider = divider / 5;
                 }
 
                 Console.WriteLine(zerosCount);
-                // odejmuj do liczby podzielnej przez 5
-                // dziel j / 5 tak długo > 0, % + % .... = wynik
             }
         }
     }
