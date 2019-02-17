@@ -10,8 +10,13 @@ namespace ONP
         static void Main(string[] args)
         {
             Onp Onp = new Onp();
-            Onp.ConvertToOnp("tets");
+            int t = Int32.Parse(Console.ReadLine());
 
+            for (int i = 0; i < t; i++)
+            {
+                string result = Onp.ConvertToOnp(Console.ReadLine());
+                Console.WriteLine(result);
+            }
         }
     }
 }
