@@ -9,7 +9,9 @@ namespace ONP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ONP - Transform the Expression");
+            Onp Onp = new Onp();
+            Onp.ConvertToOnp("tets");
+
         }
     }
 }
