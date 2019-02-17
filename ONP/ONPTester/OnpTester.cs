@@ -18,6 +18,7 @@ namespace ONPTester
         [InlineData("((a+b)*(z+x))", "ab+zx+*")]
         [InlineData("((a+t)*((b+(a+c))^(c+d)))", "at+bac++cd+^*")]
         [InlineData("a+b", "ab+")]
+        [InlineData("a", "a")]
         [InlineData("x+a*(b*c+d/e)", "xabc*de/+*+")]
         public void ConvertToOnpTest(string value, string expectedResult)
         {
